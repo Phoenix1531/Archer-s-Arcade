@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url(/assets/firstpage\ bg\ 2.png);
+    background-image: url(./assets/firstpage\ bg\ 2.png);
     background-repeat: no-repeat;
     background-size:100% 110vh;
     display: flex;
