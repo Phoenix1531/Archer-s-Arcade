@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(/assets/gameover\ bg.png);
+    background-repeat: no-repeat;
+    background-size:100% 110vh;
+    display: flex;
+}
+.left{
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+#archer{
+
+    width: 34vw;
+    height: 90vh;
+}
+.gameover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFCFC;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Evil Empire;
+    font-size: 28px;
+    font-weight: 400;
+    width: 550px;
+    height: 320px;
+    background-image: url(/assets/gameover\ plank.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-text-stroke: 1px black;
+}
+.gameover h2{
+    margin-top: 90px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 150px;
+}
+
+
+
+
+
