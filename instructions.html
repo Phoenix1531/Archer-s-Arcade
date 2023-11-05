@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instructions-page</title>
-    <link rel="stylesheet" href="instructions.css">
+    <link rel="stylesheet" href="./instructions.css">
 </head>
 <body>
-    <img id="go-back" src="/assets/go back btn.png" alt="">
+    <img id="go-back" src="./assets/go back btn.png" alt="">
     <main>
         <div class="page">
             <h1>instructions</h1>
@@ -26,4 +26,10 @@
         </div>
     </main>
 </body>
+<script>
+    let backBtn=document.getElementById("go-back")
+backBtn.addEventListener("click",(e)=>{
+    window.location.href="./startpage.html"
+})
+</script>
 </html>

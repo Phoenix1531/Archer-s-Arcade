@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(/assets/instructions\ bg.png);
+    background-image: url(./assets/instructions\ bg.png);
     background-repeat: no-repeat;
     background-size: 100% 110vh;
     display: flex;
@@ -24,7 +24,7 @@ main{
     width: 860px;
     height: 600px;
     padding: 30px;
-    background-image: url(/assets/instructions\ transparent.png);
+    background-image: url(./assets/instructions\ transparent.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

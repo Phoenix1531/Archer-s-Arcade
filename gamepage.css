@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url(/assets/gamepage\ bg.png);
+    background-image: url(./assets/gamepage\ bg.png);
     background-repeat: no-repeat;
     background-size:100% 105vh;
     display: flex;
@@ -26,7 +26,7 @@ body {
     margin: 15px 0 0 20px;
     width: 130px;
     height: 140px;
-    background-image: url(/assets/arrow\ plank.png);
+    background-image: url(./assets/arrow\ plank.png);
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-text-stroke: 1px black;
@@ -45,7 +45,7 @@ body {
     font-weight: 400;
     width: 250px;
     height: 140px;
-    background-image: url(/assets/score\ plank.png);
+    background-image: url(./assets/score\ plank.png);
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-text-stroke: 1px black;

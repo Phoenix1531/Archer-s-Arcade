@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url(/assets/gameover\ bg.png);
+    background-image: url(./assets/gameover\ bg.png);
     background-repeat: no-repeat;
     background-size:100% 110vh;
     display: flex;
@@ -30,7 +30,7 @@ body {
     font-weight: 400;
     width: 550px;
     height: 320px;
-    background-image: url(/assets/gameover\ plank.png);
+    background-image: url(./assets/gameover\ plank.png);
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-text-stroke: 1px black;

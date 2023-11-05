@@ -10,5 +10,10 @@
     <img id="logo" src="./assets/Archer’s Arena.png" alt="logo">
     <img id="anywhere" src="./assets/Tap Anywhere to play.png" alt="anywhere">
 </body>
-<script src="./firstpage.js"></script>
+<script>
+    let body=document.querySelector("body")
+body.addEventListener("click",(e)=>{
+    window.location.href="./startpage.html"
+})
+</script>
 </html>
