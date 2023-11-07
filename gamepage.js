@@ -4,54 +4,57 @@ let scoreCount = document.getElementById("score-count");
 let arrowCount = document.getElementById("arrow-count");
 
 let score = 0;
-let noOfArrows = 3;
+let noOfArrows = 5;
 let isArrowVisible = false;
-let gameStarted = false;
+
+let arrowSound=new Audio("./assets/arrow-body-impact-146419.mp3")
+arrowCount.textContent=noOfArrows
 
 function arrowMove() {
-    let arrowLeft = 30;
-    isArrowVisible = true;
-    arrow.style.display = "block";
-  
-    const arrowMoveInterval = setInterval(function () {
-      arrowLeft += 30;
-      arrow.style.left = arrowLeft + "px";
-  
-      const arrowRect = arrow.getBoundingClientRect();
-      const targetRect = target.getBoundingClientRect();
-  
-      if (
-        arrowRect.right >= targetRect.left &&
-        arrowRect.left <= targetRect.right &&
-        arrowRect.bottom >= targetRect.top &&
-        arrowRect.top <= targetRect.bottom
-      ) {
-        score++;
-        scoreCount.textContent = score;
-        arrow.style.display = "none";
-        isArrowVisible = false;
-        clearInterval(arrowMoveInterval);
+  let arrowLeft = 30;
+  isArrowVisible = true;
+  arrow.style.display = "block";
+
+  const arrowMoveInterval = setInterval(function () {
+    arrowLeft += 40;
+    arrow.style.left = arrowLeft + "px";
+
+    const arrowRect = arrow.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
+
+    if (
+      arrowRect.right >= targetRect.left &&
+      arrowRect.left <= targetRect.right &&
+      arrowRect.bottom >= targetRect.top &&
+      arrowRect.top <= targetRect.bottom
+    ) {
+      console.log("arrowRect: ", arrowRect);
+      console.log("targetRect: ", targetRect.top);
+      score++;
+      scoreCount.textContent = score;
+
+      if (targetRect.top <= 439 && targetRect.top >= 429  ) {
+        alert("Bulls Eye");
       }
-  
-      if (arrowLeft >= window.innerWidth) {
-        arrow.style.display = "none";
-        isArrowVisible = false;
-        clearInterval(arrowMoveInterval);
-      }
-    }, 10);
-  }
-  
+
+      arrow.style.display = "none";
+      isArrowVisible = false;
+      clearInterval(arrowMoveInterval);
+    }
+    if (arrowLeft >= window.innerWidth) {
+      arrow.style.display = "none";
+      isArrowVisible = false;
+      clearInterval(arrowMoveInterval);
+    }
+  }, 10);
+}
 
 function handleSpacebar(event) {
   if (event.keyCode === 32 && noOfArrows > 0 && !isArrowVisible) {
-    if (gameStarted) {
-      arrowMove();
-      noOfArrows--;
-      arrowCount.textContent = noOfArrows;
-    }
-    if (!gameStarted) {
-      gameStarted = true;
-    }
+    arrowMove();
+    noOfArrows--;
+    arrowCount.textContent = noOfArrows;
+    arrowSound.play()
   }
 }
 document.addEventListener("keydown", handleSpacebar);
@@ -66,7 +69,7 @@ function moveTarget() {
     } else if (topPosition <= 0) {
       direction = 1;
     }
-    topPosition += direction * 8;
+    topPosition += direction * 3;
 
     target.style.top = topPosition + "px";
   }, 10);
@@ -75,9 +78,9 @@ function moveTarget() {
 function gameOver() {
   const gameOverInterval = setInterval(function () {
     if (noOfArrows === 0) {
-      localStorage.setItem('score', JSON.stringify(score));
-      window.location.href = 'gameover.html';
-      clearInterval(gameOverInterval); 
+      localStorage.setItem("score", JSON.stringify(score));
+      window.location.href = "gameover.html";
+      clearInterval(gameOverInterval);
     }
   }, 1800);
 }

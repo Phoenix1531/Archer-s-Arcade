@@ -1,78 +1,92 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
+
 body {
     background-image: url(./assets/gamepage\ bg.png);
     background-repeat: no-repeat;
-    background-size:100% 105vh;
+    background-size: 100% 105vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
-.top{
+
+.top {
     display: flex;
     width: 100vw;
 }
-.arrow-plank{
+
+.arrow-plank {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFFCFC;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Evil Empire;
-    font-size: 28px;
+    font-size: 2vw;
     font-weight: 400;
     margin: 15px 0 0 20px;
-    width: 130px;
-    height: 140px;
-    background-image: url(./assets/arrow\ plank.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 8vw;
+    height: 9vw;
     -webkit-text-stroke: 1px black;
 }
-.arrow-plank h2{
+#arrowboard{
+    width: 8vw;
+    height: 9vw;
+    position: absolute;
+    z-index: -1;
+}
+.arrow-plank h2 {
     margin-left: 10px;
 }
-.score-plank{
-    margin-left: 500px;
+
+.score-plank {
+    margin-left: 33vw;
     display: flex;
+    text-align: center;
     justify-content: center;
     color: #FFFCFC;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Evil Empire;
-    font-size: 28px;
+    font-size: 2vw;
     font-weight: 400;
-    width: 250px;
-    height: 140px;
-    background-image: url(./assets/score\ plank.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 20vw;
+    height: 11vw;
     -webkit-text-stroke: 1px black;
+}
 
+.score-plank h2 {
+    margin-top: 1vw;
 }
-.score-plank h2{
-    margin-top: 35px;
+
+#scoreboard {
+    position: absolute;
+    width: 20vw;
+    height: 11vw;
+    z-index: -1;
 }
-#archer{
+
+#archer {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 15vw;
-    height: 35vh;
+    width: 20vw;
+    height: 55vh;
 }
+
 #arrow {
     display: none;
     position: absolute;
-    bottom: 18vh;
-    left: 15vw;
-    animation: moveArrow 4s linear infinite; 
-  }
-  #target {
-    height: 200px;
+    bottom: 30vh;
+    left: 18vw;
+}
+
+#target {
+    height: 20vh;
     position: absolute;
-    bottom: 0;
-    right: 10px;
-    animation: moveTarget 4s linear infinite;
-  }
+    bottom: 164px;
+    right: 0px;
+    border-radius: 60px;
+}
