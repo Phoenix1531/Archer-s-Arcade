@@ -4,7 +4,7 @@ let scoreCount = document.getElementById("score-count");
 let arrowCount = document.getElementById("arrow-count");
 
 let score = 0;
-let noOfArrows = 5;
+let noOfArrows = 20;
 let isArrowVisible = false;
 
 let arrowSound=new Audio("./assets/arrow-body-impact-146419.mp3")

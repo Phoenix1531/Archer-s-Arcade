@@ -75,18 +75,18 @@ body {
 
 #arrow {
     width: 15vw;
-    height: 2vw;
+    height: 1vw;
     display: none;
     position: absolute;
-    bottom: 28.5vh;
+    bottom: 31vh;
     left: 18vw;
 }
 #bullseye-box{
     position: absolute;
-    top: 4.4vw;
+    top: 4.5vw;
     width: 20px;
-    height: 15px;
-    border: 2px solid red;
+    height: 1px;
+    /* border: 2px solid red; */
 }
 #target img{
     height: 20vh;
@@ -95,6 +95,6 @@ body {
 #target{
     height: 20vh;
     position: absolute;
-    bottom: 164px;
+    bottom: 158px;
     right: 0px;
 }
