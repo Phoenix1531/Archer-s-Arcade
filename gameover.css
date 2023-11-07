@@ -15,9 +15,11 @@ body {
     align-items: flex-end;
 }
 #archer{
-
     width: 34vw;
     height: 90vh;
+}
+#restart{
+    border-radius: 40px;
 }
 .gameover{
     display: flex;
@@ -45,6 +47,7 @@ body {
     align-items: center;
     position: absolute;
     right: 150px;
+    top: 100px;
 }
 
 

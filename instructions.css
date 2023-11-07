@@ -16,11 +16,13 @@ body {
     width: 300px;
     height: 140px;
 }
-main{
+
+main {
     display: flex;
     justify-content: center;
 }
-.page{
+
+.page {
     width: 860px;
     height: 600px;
     padding: 30px;

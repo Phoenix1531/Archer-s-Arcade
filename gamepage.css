@@ -9,6 +9,7 @@ body {
     background-size:100% 105vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .top{
     display: flex;
@@ -58,12 +59,20 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 23vw;
-    height: 58vh;
+    width: 15vw;
+    height: 35vh;
 }
-#target{
-    height: 300px;
+#arrow {
+    display: none;
     position: absolute;
-    bottom: 100px;
+    bottom: 18vh;
+    left: 15vw;
+    animation: moveArrow 4s linear infinite; 
+  }
+  #target {
+    height: 200px;
+    position: absolute;
+    bottom: 0;
     right: 10px;
-}
+    animation: moveTarget 4s linear infinite;
+  }
