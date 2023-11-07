@@ -33,8 +33,14 @@ function arrowMove() {
       score++;
       scoreCount.textContent = score;
 
-      if (targetRect.top <= 439 && targetRect.top >= 429  ) {
-        alert("Bulls Eye");
+      const bullseyeRect = document.getElementById("bullseye-box").getBoundingClientRect();
+      if (
+        arrowRect.right >= bullseyeRect.left &&
+        arrowRect.left <= bullseyeRect.right &&
+        arrowRect.bottom >= bullseyeRect.top &&
+        arrowRect.top <= bullseyeRect.bottom
+      ) {
+        alert("Bullseye!");
       }
 
       arrow.style.display = "none";
@@ -64,7 +70,8 @@ function moveTarget() {
   let direction = 1;
 
   const targetMoveInterval = setInterval(function () {
-    if (topPosition >= window.innerHeight - target.height) {
+    if (topPosition >= window.innerHeight - target.clientHeight) {
+      topPosition = window.innerHeight - target.clientHeight;
       direction = -1;
     } else if (topPosition <= 0) {
       direction = 1;
@@ -74,6 +81,8 @@ function moveTarget() {
     target.style.top = topPosition + "px";
   }, 10);
 }
+
+
 
 function gameOver() {
   const gameOverInterval = setInterval(function () {

@@ -38,9 +38,6 @@ body {
     position: absolute;
     z-index: -1;
 }
-.arrow-plank h2 {
-    margin-left: 10px;
-}
 
 .score-plank {
     margin-left: 33vw;
@@ -77,16 +74,27 @@ body {
 }
 
 #arrow {
+    width: 15vw;
+    height: 2vw;
     display: none;
     position: absolute;
-    bottom: 30vh;
+    bottom: 28.5vh;
     left: 18vw;
 }
-
-#target {
+#bullseye-box{
+    position: absolute;
+    top: 4.4vw;
+    width: 20px;
+    height: 15px;
+    border: 2px solid red;
+}
+#target img{
+    height: 20vh;
+    border-radius: 60px;
+}
+#target{
     height: 20vh;
     position: absolute;
     bottom: 164px;
     right: 0px;
-    border-radius: 60px;
 }
