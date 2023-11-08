@@ -29,8 +29,7 @@ function arrowMove() {
       arrowRect.bottom >= targetRect.top &&
       arrowRect.top <= targetRect.bottom
     ) {
-      // console.log("arrowRect: ", arrowRect);
-      // console.log("targetRect: ", targetRect.top);
+     
       score++;
       scoreCount.textContent = score;
 
@@ -88,12 +87,13 @@ function gameOver() {
   const gameOverInterval = setInterval(function () {
     if (noOfArrows === 0) {
       localStorage.setItem("score_1", JSON.stringify(score));
-      localStorage.setItem("bullseyes_1", JSON.stringify(bullseyes));
+      localStorage.setItem("bullseyes1", JSON.stringify(bullseyes));
       window.location.href = "game-2.html";
       clearInterval(gameOverInterval);
     }
   }, 1800);
 }
+console.log(window)
 
 gameOver();
 moveTarget();

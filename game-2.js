@@ -89,7 +89,7 @@ function gameOver() {
     if (noOfArrows === 0) {
       localStorage.setItem("score_2", JSON.stringify(score));
       localStorage.setItem("bullseyes_2", JSON.stringify(bullseyes));
-      window.location.href = "gameover.html";
+      window.location.href = "game-3.html";
       clearInterval(gameOverInterval);
     }
   }, 1800);
