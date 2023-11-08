@@ -25,7 +25,7 @@ body {
     color: #FFFCFC;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Evil Empire;
-    font-size: 2vw;
+    font-size: 1.7vw;
     font-weight: 400;
     margin: 15px 0 0 20px;
     width: 8vw;
@@ -37,6 +37,9 @@ body {
     height: 9vw;
     position: absolute;
     z-index: -1;
+}
+.arrow-plank h2{
+    margin-left: 15px;
 }
 
 .score-plank {
@@ -97,4 +100,7 @@ body {
     position: absolute;
     bottom: 158px;
     right: 0px;
+}
+@media (min-width: 500px) and (max-width: 1000px) and (orientation: landscape) {
+    
 }

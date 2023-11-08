@@ -10,13 +10,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 #logo{
-    width: 500px;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    width: 35vw;
+    margin-top: 8vw;
+    margin-bottom: 3vw;
 }
 #anywhere{
-    margin-left: 50px;
+    width: 30vw;
+    margin-left: 2vw;
+}
+#char-1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30vw;
+    width: 23vw;
+}
+#char-2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30vw;
+    width: 23vw;
+}
+@media (min-width: 500px) and (max-width: 1000px) and (orientation: landscape) {
+
 }
 

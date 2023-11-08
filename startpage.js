@@ -16,6 +16,6 @@ startButton.addEventListener('click', () => {
   playerInfo.name = nameInput.value;
   playerInfo.nickname = nicknameInput.value;
   localStorage.setItem('playerInfo', JSON.stringify(playerInfo));
-  window.location.href = 'gamepage.html';
+  window.location.href = 'game-1.html';
 });
 

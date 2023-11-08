@@ -4,7 +4,8 @@ let scoreCount = document.getElementById("score-count");
 let arrowCount = document.getElementById("arrow-count");
 
 let score = 0;
-let noOfArrows = 20;
+let bullseyes=0;
+let noOfArrows = 3;
 let isArrowVisible = false;
 
 let arrowSound=new Audio("./assets/arrow-body-impact-146419.mp3")
@@ -28,8 +29,8 @@ function arrowMove() {
       arrowRect.bottom >= targetRect.top &&
       arrowRect.top <= targetRect.bottom
     ) {
-      console.log("arrowRect: ", arrowRect);
-      console.log("targetRect: ", targetRect.top);
+      // console.log("arrowRect: ", arrowRect);
+      // console.log("targetRect: ", targetRect.top);
       score++;
       scoreCount.textContent = score;
 
@@ -40,6 +41,7 @@ function arrowMove() {
         arrowRect.bottom >= bullseyeRect.top &&
         arrowRect.top <= bullseyeRect.bottom
       ) {
+        bullseyes++;
         alert("Bullseye!");
       }
 
@@ -76,19 +78,18 @@ function moveTarget() {
     } else if (topPosition <= 0) {
       direction = 1;
     }
-    topPosition += direction * 3;
+    topPosition += direction * 2;
 
     target.style.top = topPosition + "px";
   }, 10);
 }
 
-
-
 function gameOver() {
   const gameOverInterval = setInterval(function () {
     if (noOfArrows === 0) {
-      localStorage.setItem("score", JSON.stringify(score));
-      window.location.href = "gameover.html";
+      localStorage.setItem("score_1", JSON.stringify(score));
+      localStorage.setItem("bullseyes_1", JSON.stringify(bullseyes));
+      window.location.href = "game-2.html";
       clearInterval(gameOverInterval);
     }
   }, 1800);
