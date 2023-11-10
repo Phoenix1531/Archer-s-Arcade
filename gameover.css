@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #FFFCFC;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Evil Empire;
@@ -40,7 +41,7 @@ body {
     -webkit-text-stroke: 1px black;
 }
 .gameover h2{
-    margin-top: 8vw;
+    margin-top: 10vw;
 }
 .right{
     display: flex;
