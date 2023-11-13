@@ -4,5 +4,6 @@ body.addEventListener("click",(e)=>{
 })
 let bgMusic = new Audio("./assets/bg-music.mp3");
 const bgMusicPlay=setInterval(function(){
-    bgMusic.play()
+ bgMusic.play()
+ bgMusic.loop=true
 },240000)

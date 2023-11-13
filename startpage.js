@@ -18,4 +18,9 @@ startButton.addEventListener('click', () => {
   localStorage.setItem('playerInfo', JSON.stringify(playerInfo));
   window.location.href = 'game-1.html';
 });
+let bgMusic = new Audio("./assets/bg-music.mp3");
+
+bgMusic.play();
+bgMusic.loop=true
+
 

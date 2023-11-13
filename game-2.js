@@ -11,6 +11,11 @@ let isArrowVisible = false;
 let arrowSound=new Audio("./assets/arrow-body-impact-146419.mp3")
 arrowCount.textContent=noOfArrows
 
+let bgMusic = new Audio("./assets/bg-music.mp3");
+
+bgMusic.play();
+bgMusic.loop=true
+
 function arrowMove() {
   let arrowLeft = 30;
   isArrowVisible = true;
@@ -29,8 +34,7 @@ function arrowMove() {
       arrowRect.bottom >= targetRect.top &&
       arrowRect.top <= targetRect.bottom
     ) {
-      // console.log("arrowRect: ", arrowRect);
-      // console.log("targetRect: ", targetRect.top);
+      
       score++;
       scoreCount.textContent = score;
 

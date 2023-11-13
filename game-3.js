@@ -12,6 +12,11 @@ let isArrowVisible = false;
 let arrowSound = new Audio("./assets/arrow-body-impact-146419.mp3");
 arrowCount.textContent = noOfArrows;
 
+let bgMusic = new Audio("./assets/bg-music.mp3");
+
+bgMusic.play();
+bgMusic.loop=true
+
 function arrowMove() {
   let arrowLeft = archer.offsetLeft;
   let arrowTop = archer.offsetTop + archer.clientHeight / 2; // Set arrow height to the center of the archer

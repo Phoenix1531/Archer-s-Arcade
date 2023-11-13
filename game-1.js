@@ -97,3 +97,8 @@ console.log(window)
 
 gameOver();
 moveTarget();
+
+let bgMusic = new Audio("./assets/bg-music.mp3");
+
+bgMusic.play();
+bgMusic.loop=true

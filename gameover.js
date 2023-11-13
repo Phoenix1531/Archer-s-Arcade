@@ -3,6 +3,11 @@ restartBtn.addEventListener("click", (e) => {
   window.location.href = "game-1.html";
 });
 
+let bgMusic = new Audio("./assets/bg-music.mp3");
+
+bgMusic.play();
+bgMusic.loop=true
+
 const scoreElement = document.getElementById("score-count");
 const playerName = document.getElementById("playername");
 const bullseyeElement = document.getElementById("BulleyesCount");
