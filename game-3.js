@@ -147,8 +147,8 @@ function gameOver() {
   const gameOverInterval = setInterval(function () {
     if (noOfArrows === 0) {
       // Save score and bullseyes to local storage
-      localStorage.setItem("score-3", JSON.stringify(score));
-      localStorage.setItem("bullseyes-3", JSON.stringify(bullseyes));
+      sessionStorage.setItem("score_3", JSON.stringify(score));
+      sessionStorage.setItem("bullseyes_3", JSON.stringify(bullseyes));
       // Redirect to the game over page
       window.location.href = "gameover.html";
       clearInterval(gameOverInterval);

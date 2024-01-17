@@ -15,7 +15,7 @@ startButton.addEventListener('click', () => {
 
   playerInfo.name = nameInput.value;
   playerInfo.nickname = nicknameInput.value;
-  localStorage.setItem('playerInfo', JSON.stringify(playerInfo));
+  sessionStorage.setItem('playerInfo', JSON.stringify(playerInfo));
   window.location.href = 'game-1.html';
 });
 let bgMusic = new Audio("./assets/bg-music.mp3");

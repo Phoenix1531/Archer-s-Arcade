@@ -109,8 +109,8 @@ function gameOver() {
   const gameOverInterval = setInterval(function () {
     if (noOfArrows === 0) {
       // Save score and bullseyes to local storage
-      localStorage.setItem("score_1", JSON.stringify(score));
-      localStorage.setItem("bullseyes1", JSON.stringify(bullseyes));
+      sessionStorage.setItem("score_1", JSON.stringify(score));
+      sessionStorage.setItem("bullseyes1", JSON.stringify(bullseyes));
       // Redirect to the next level
       window.location.href = "game-2.html";
       clearInterval(gameOverInterval);
@@ -127,4 +127,4 @@ let bgMusic = new Audio("./assets/bg-music.mp3");
 
 // Play background music and set it to loop
 bgMusic.play();
-bgMusic.loop = true;
+bgMusic.loop = true;  
